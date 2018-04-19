@@ -55,4 +55,4 @@ input:not([type]), input[type="email" i], input[type="number" i], input[type="pa
 /*清除浮动*/
 .clearfloat:after{content: ".";display: block;height: 0;overflow: hidden;visibility: hidden;clear: both;}
 
-.hidden{display: none;}
+.hidden{display: none !important;}
