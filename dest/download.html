@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>公司简介</title>
+		<title>APP下载</title>
 		<link rel="stylesheet" type="text/css" href="css/rest.css"/>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
 		<link rel="stylesheet" type="text/css" href="css/base.css"/>
@@ -22,33 +22,44 @@
 				  <li><a href="company_introduction.html">公司简介</a></li>
 				  <li><a href="product_introduction.html">产品介绍</a></li>
 				  <li class="active"><a href="#">APP下载</a></li>
-				  <li><a href="#">招商加盟</a></li>
-				  <li><a href="#">招贤纳士</a></li>
+				  <li><a href="">招商加盟</a></li>
+				  <li><a href="join.html">招贤纳士</a></li>
 				</ul>
 			</div>
 		</div>
 		<div class="banner-wrap download_banner">
 			<div class="banner_inner clearfloat">
-				<div class="banner_inner_left">
-					
-				</div>
+				<div class="banner_inner_left"></div>
 				<div class="banner_inner_right">
 					<dl class="erCode_item">
 						<dt><img src="img/grh-app.png"/></dt>
 						<dd>下载果然好APP</dd>
+						<dd>果然好，<br/>引领行业水果销售新模式！</dd>
 					</dl>
 					<dl class="erCode_item">
 						<dt><img src="img/grh-bussiness-app.png"/></dt>
 						<dd>下载果然好商户版APP</dd>
+						<dd>全国地区专业水果配送平台，<br/>平台最新优惠，<br/>开店实用技巧应有尽有。</dd>
 					</dl>
 				</div>
 				</div>
 			</div>
 		</div>
 		<div class="main-wrap">
-			
-			<div class="main">
-				
+			<div class="main-wrap-download1">
+				<div class="main_inner_area clearfloat">
+					
+				</div>
+			</div>
+			<div class="main-wrap-download2">
+				<div class="main_inner_area clearfloat">
+					
+				</div>
+			</div>
+			<div class="main-wrap-download3">
+				<div class="main_inner_area clearfloat">
+					
+				</div>
 			</div>
 		</div>
 		<div class="footer-wrap">
@@ -96,7 +107,86 @@
 			});
 			var h = window.screen.height - $(".header-wrap").height();
 			var w = window.screen.width;
-		
+			var data = [{
+				'title':"机器扫码三步成会员",
+				'arr':[{
+					'index':'1',
+					'describe':'微信扫一扫，扫机器专属二维码',
+					'img':'img/download-1-1.png'
+				},{
+					'index':'1',
+					'describe':'自动关注果然好微信公众号，点击推送图文',
+					'img':'img/download-1-2.png'
+				},{
+					'index':'1',
+					'describe':'以成为果然好会员，开启购物之旅',
+					'img':'img/download-1-3.png'
+				}]
+			},{
+				'title':"WATM售货机演示（线上支付）",
+				'arr':[{
+					'index':'1',
+					'describe':'线上下单，请选择自提点取货方式，订单详情有相关的订单号和提货码',
+					'img':'img/download-2-1.png'
+				},{
+					'index':'2',
+					'describe':'去就进的WATM，输入订单号后5数和取件码',
+					'img':'img/download-2-2.png'
+				},{
+					'index':'3',
+					'describe':'点击取货依次将货物取出',
+					'img':'img/download-2-3.png'
+				}]
+			},{
+				'title':"WATM售货机演示（线下支付）",
+				'arr':[{
+					'index':'1',
+					'describe':'首页选择商品',
+					'img':'img/download-3-1.png'
+				},{
+					'index':'2',
+					'describe':'选择支付方式',
+					'img':'img/download-3-2.png'
+				},{
+					'index':'3',
+					'describe':'扫码支付',
+					'img':'img/download-3-3.png'
+				},{
+					'index':'4',
+					'describe':'点击取货依次将货物取出',
+					'img':'img/download-3-4.png'
+				}]
+			}];
+			
+			function downloadInit (data){
+				var el1 = $(".main-wrap-download1"),
+					el2 = $(".main-wrap-download2"),
+					el3 = $(".main-wrap-download3");
+				var html = '';
+				for (var i in data) {
+					html = '';
+					html += '<div class="download_inner_title">'+data[i].title+'</div>'
+					html += '<div class="download_inner_center clearfloat">'
+						for(var j in data[i].arr){
+							console.log(data[i].arr[j])
+							html += '<dl>'
+							html += '	<dt>'
+							html += '		<p><span class="index">'+data[i].arr[j].index+'</span></p>'
+							html += '		<p>'+data[i].arr[j].describe+'</p>'
+							html += '	</dt>'
+							html += '	<dd>'
+							html += '		<img src="'+data[i].arr[j].img+'"/>'
+							html += '	</dd>'
+							html += '</dl>'
+						}
+						
+					html += '</div>'
+					var c = ".main-wrap-download"+(parseInt(i)+1)+" .main_inner_area";
+					
+					$(c).html(html)
+				}
+			}
+			downloadInit(data)
 		})
 	</script>
 </html>
