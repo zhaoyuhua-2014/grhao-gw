@@ -38,11 +38,11 @@ input[type="color"]:focus,
 .banner-wrap{width: 100%;top: 100px;z-index: 10;height: 500px;padding-top: 100px;}
 .index_body .banner-wrap{height: 100%;}
 .banner-wrap .index-banner{height: 100%;}
-.index-banner .banner_page1{background: url(../img/index-banner1.png) no-repeat center;}
-.index-banner .banner_page2{background: url(../img/index-banner2.png) no-repeat center;overflow: hidden;}
-.index-banner .banner_page3{background: url(../img/index-banner3.png) no-repeat center;}
-.index-banner .banner_page4{background: url(../img/index-banner4.png) no-repeat center;}
-.index-banner .banner_page5{background: url(../img/index-banner2.png) no-repeat top center;}
+.index-banner .banner_page1{background: url(../img/index-banner1.png) no-repeat top center;background-size:cover ;}
+.index-banner .banner_page2{background: url(../img/index-banner2.png) no-repeat top center;overflow: hidden;background-size:cover ;}
+.index-banner .banner_page3{background: url(../img/index-banner3.png) no-repeat top center;background-size:cover ;}
+.index-banner .banner_page4{background: url(../img/index-banner4.png) no-repeat top center;background-size:cover;}
+.index-banner .banner_page5{background: url(../img/index-banner2.png) no-repeat top center;background-size:cover ;}
 
 .banner_page_inner{width: 1200px;margin: 0 auto;}
 .banner_page2 .banner_page_inner h3{padding-top: 112px;padding-bottom: 120px;text-align: center;font-size: 30px;color: #93BF1D;margin: 0;}
@@ -50,8 +50,9 @@ input[type="color"]:focus,
 .banner_page2 .banner_inner_item dt{height: 46px;}
 .banner_page2 .banner_inner_item .txt{color: #333333;font-size: 14px;line-height: 24px;}
 .banner_page2 .banner_inner_item .title{color: #333333;font-size: 24px;line-height: 60px;}
-.white-area{height: 24%;min-height: 150px;}
-.black-area{background: #353535;height: 76%;padding-top: 120px;position: relative;min-height: 560px;}
+.white-area{height: 25%;}
+.black-area{background: #353535;height: 75%;padding-top: 10%; position: relative;min-height: 560px;}
+.black-area .footer-copyright{position: absolute;bottom: 30px;}
 
 .laynext { position: relative; z-index: 99; line-height: 0; height: 0;top: 100%; left: 0; }
 .go-next {text-decoration: none; text-align: center; color: #ffffff; font-size: 36px; position: absolute; bottom: 50px; left: 50%; margin-left: -30px; display: block; width:60px; height: 60px; background: url(../img/downArrowblack.png) no-repeat center; line-height:60px; z-index: 99; cursor: pointer;}
