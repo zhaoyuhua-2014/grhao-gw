@@ -1,3 +1,29 @@
+/*针对bootstrop的重置样式*/
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: rgba(146,191,28, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(146,191,28, 0.6);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(146,191,28, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(146,191,28, 0.6);
+}
 
 /*首页样式*/
 .index_body{overflow: hidden;}
@@ -8,11 +34,12 @@
 .header .nav > li{float: left;}
 .header .nav > li > a{padding: 0 25px;font-size: 18px;color: #333333;line-height: 100px;}
 .header .nav > li.active > a{color: #93bf1d;}
+.nav > li > a:hover, .nav > li > a:focus{background:none ;color: #93bf1d;}
 .banner-wrap{width: 100%;top: 100px;z-index: 10;height: 500px;padding-top: 100px;}
 .index_body .banner-wrap{height: 100%;}
 .banner-wrap .index-banner{height: 100%;}
 .index-banner .banner_page1{background: url(../img/index-banner1.png) no-repeat center;}
-.index-banner .banner_page2{background: url(../img/index-banner2.png) no-repeat center;}
+.index-banner .banner_page2{background: url(../img/index-banner2.png) no-repeat center;overflow: hidden;}
 .index-banner .banner_page3{background: url(../img/index-banner3.png) no-repeat center;}
 .index-banner .banner_page4{background: url(../img/index-banner4.png) no-repeat center;}
 .index-banner .banner_page5{background: url(../img/index-banner2.png) no-repeat top center;}
@@ -35,10 +62,10 @@
 .onepage-pagination .dotted {display: block;width: 18px;height: 18px;}
 .onepage-pagination a { padding: 10px 16px;}
 .onepage-pagination .dotted {border: 2px #fff solid;position: relative;display: block;border-radius:50%; -webkit-transition: all 500ms ease;-o-transition: all 500ms ease;-moz-transition: all 500ms ease;-ms-transition: all 500ms ease; transition: all 500ms ease;}
-.onepage-pagination .active .dotted {border-color: #0cf; background-color:#0cf !important;}
+.onepage-pagination .active .dotted {border-color: #93bf1d; background-color:#93bf1d !important;}
 	
 .footer-wrap{width: 100%;background: #353535;padding-top: 120px;}
-.footer{width: 1200px;margin: 0 auto;color: #fefefe;min-height: ;}
+.footer{width: 1200px;margin: 0 auto;color: #fefefe;padding-bottom: 80px;}
 .footer a{color: #FEFEFE;}
 .footer .footer_item{padding: 0 20px;}
 .footer .footer_item:first-child{width: 460px;}
@@ -122,7 +149,7 @@
 .banner_inner_right .erCode_item dd:nth-child(2){height: 70px;padding-top: 10px;font-size: 16px;color: #FFFFFF;line-height: 30px;}
 .banner_inner_right .erCode_item dd:nth-child(3){line-height: 22px;font-size: 12px;color: #E3E3E3;}
 
-.main-wrap-download1,.main-wrap-download3{background: #FFF;}
+.main-wrap-download1,.main-wrap-download3{background: #FFF;padding-bottom: 60px;}
 .main-wrap-download2{background: #f8f8f8;}
 .main-wrap-download1,.main-wrap-download2,.main-wrap-download3{}
 
@@ -168,4 +195,37 @@
 .banner-wrap.partner_banner{background: url(../img/banner03.png) no-repeat center 100px;}
 .main-wrap-partner .mian_inner_wrap{padding-top: 70px;}
 
-.main-wrap-partner .main_partner_title{height: 70px;font-size: ;}
+.main-wrap-partner .main_partner_title{font-size: 36px;font-weight: 800;line-height: 60px;padding-top: 70px;text-align: center;}
+.main-wrap-partner .main_partner_describe{padding: 28px 0;}
+.main-wrap-partner .main_partner_describe p{line-height: 44px;text-indent: 48px;color: #333;font-size: 24px;}
+.main-wrap-partner .main_partner_submit{padding: 50px 0;}
+.main_partner_submit a{display: block;width: 360px;height: 70px;border-radius: 4px;background: #93BF1D;margin: 0 auto;line-height: 70px;text-align: center;color: #FFF;font-size: 24px;}
+.main_partner_submit a:active{background: #87b117;}
+/*表单提交*/
+.from-wrap.main-wrap{padding-top: 100px;}
+.main_wrap_from{background: #f9f9f9;padding-top: 60px;}
+.from_center_box{width: 704px;margin: 0 auto;}
+.form-group label.make:after{content: "*";padding-left: 10px;display:inline-block; color: #f02f30;position: relative;font-size: 28px;top: 9px;}
+.form-group label{font-size: 18px;color: #333;line-height: 60px;}
+.form-group input[type="text"]{display: block;width: 100%;height: 52px;font-size: 16px;color: #333;padding-left: 24px;}
+
+.from-inline .form-group{width: 184px;float: left;margin-right: 74px;position: relative;height: 54px;}
+.from-inline .form-group:nth-last-child(1){margin-right: 0;}
+.from-inline .form-control{width: 100%;padding-left:24px ;height: 54px;line-height: 46px;margin-bottom: 0;font-size: 16px;}
+.from-inline .form-group .icon{width: 24px;display: block;height: 54px;border-radius: 4px;top: 0;right: 0;position: absolute;border: 1px solid #949494;background: #bdbdbd url(../img/icon_01.png) no-repeat center;overflow: hidden;cursor: pointer;}
+
+.from-inline .radio-inline{width: 50%;float: left;background: url(../img/radio1.png) no-repeat 0 center;height: 30px;line-height: 30px;padding-left: 40px;}
+.from-inline .radio-inline.active{background-image:url(../img/radio2.png) ;}
+
+.join-number{position: relative;}
+.join-number .float_left{width: 83px;height: 54px;background: url(../img/min.png) no-repeat center;position: absolute;top:0;left: 0;cursor: pointer;}
+.join-number .float_right{width: 83px;height: 54px;background: url(../img/add.png) no-repeat center;position: absolute;top:0;right: 0;cursor: pointer;}
+
+.join-number .form-group{width: 100%;margin: 0;text-align: center;}
+.join-number .form-group input{text-align: center;}
+.form-submit-wrap{padding: 46px 2px; text-align: center;}
+.form-submit-wrap .submit{width: 100%;height: 72px;line-height: 72px;text-align: center;color: #FFf;font-size: 20px;text-align: center;background:#93BF1D;border-radius: 4px;cursor: pointer;}
+
+.from_center_box .msg{color: #f02f30;}
+
+.from_center_box .success{height: 300px;line-height: 300px;font-size: 48px;text-align: center;}

@@ -20,10 +20,10 @@
 				    <a href="#">首页</a>
 				  </li>
 				  <li><a href="company_introduction.html">公司简介</a></li>
-				  <li><a href="#">产品介绍</a></li>
-				  <li><a href="#">APP下载</a></li>
-				  <li><a href="#">招商加盟</a></li>
-				  <li><a href="#">招贤纳士</a></li>
+				  <li><a href="product_introduction.html">产品介绍</a></li>
+				  <li><a href="download.html">APP下载</a></li>
+				  <li><a href="cooperative_partner.html">招商加盟</a></li>
+				  <li><a href="join.html">招贤纳士</a></li>
 				</ul>
 			</div>
 		</div>
@@ -142,6 +142,7 @@
 	<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
+		
 		$(document).ready(function(){
 			$(".nav li").on("click",function(){
 				var $this = $(this);
@@ -179,7 +180,6 @@
 				var index = (parseInt(i)+1);
 				var iswhite = arrow.is('.white');
 				var ishiddle = arrow.is(".hidden");
-				console.log(index)
 				$(".onepage-pagination a").eq(index).addClass("active").siblings().removeClass("active");
 				$(".index-banner").css({"transform":"translate3d(0px,-"+(index*100)+"%, 0px)"});
 				if (index == 0 || index == 3) {
@@ -197,6 +197,42 @@
 				
 				$(".index-banner").css({"transform":"translate3d(0px,-"+(i*$(".banner-wrap").height())+"px, 0px)"});
 			})*/
+			//滚轮事件
+			var iswheel = false;
+			var timeOut = null;
+			$(document).on("mousewheel DOMMouseScroll", function (e) {
+			    var delta = (e.originalEvent.wheelDelta && (e.originalEvent.wheelDelta > 0 ? 1 : -1)) ||  // chrome & ie
+			                (e.originalEvent.detail && (e.originalEvent.detail > 0 ? -1 : 1));              // firefox
+			    if (!iswheel) {
+			    	var i = $(".onepage-pagination a.active").attr("data-page");
+					var index = (parseInt(i));
+					var iswhite = arrow.is('.white');
+					var ishiddle = arrow.is(".hidden");
+				    if (delta > 0) {
+				    	index = index == 0 ? index : index - 1 
+				        console.log("wheelup");
+				    } else if (delta < 0) {
+						index = index ==4 ? index : index + 1; 
+						console.log("wheeldown");
+				    }
+				    if (index == 0 || index == 3) {
+						ishiddle && arrow.removeClass("hidden");
+						!iswhite &&  arrow.addClass("white");
+					} else if (index == 1 || index == 2) {
+						ishiddle && arrow.removeClass("hidden");
+						iswhite &&  arrow.removeClass("white")
+					}else{
+						!ishiddle && arrow.addClass("hidden");
+					}
+				    $(".onepage-pagination a").eq(index).addClass("active").siblings().removeClass("active");
+					$(".index-banner").css({"transform":"translate3d(0px,-"+(index*100)+"%, 0px)"});
+					iswheel = true;
+					timeOut = setTimeout(function(){
+						iswheel = false;
+					},800)
+			    }
+			    
+			});
 		})
 	</script>
 </html>
