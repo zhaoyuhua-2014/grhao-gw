@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>招商加盟</title>
+		<meta content="telephone=no, address=no" name="format-detection" />
+		<meta name="viewport" content="width=750,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="css/rest.css"/>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+	</head>
+	<body>
+		<div class="header-wrap">
+			<div class="header clearfloat">
+				<div class="logo_box float_left">
+					<img src="img/logo.png"/>
+				</div>
+				<div class="nav-menu float_right">
+					<img src="img/nav-menu.png"/>
+				</div>
+			</div>
+		</div>
+		<div class="nav-wrap">
+			<div class="nav-close-line">
+				<div class="nav-close float_right"></div>
+			</div>
+			<ul class="nav">
+				<li><a href="index.html">首页</a></li>
+			  	<li><a href="company_introduction.html">公司简介</a></li>
+			  	<li><a href="product_introduction.html">产品介绍</a></li>
+			  	<li><a href="download.html">APP下载</a></li>
+			  	<li class="active"><a href="#">招商加盟</a></li>
+			  	<li><a href="join.html">招贤纳士</a></li>
+			</ul>
+		</div>
+		<div class="main-wrap from-wrap">
+			<div class="main_wrap_from">
+				<div class="from_center_box">
+					<div class="form-group form-group1">
+						<label class="make" for="name">申请人姓名</label>
+						<input type="text" class="form-control" id="name" placeholder="请输入申请人名称">
+						<p class="msg" style="display: none;"></p>
+					</div>
+					<div class="form-group form-group2">
+						<label class="make" for="phone">联系电话</label>
+						<input type="text" class="form-control" id="phone" placeholder="请输入手机号码">
+						<p class="msg" style="display: none;"></p>
+					</div>
+					<div class="form-group form-group3">
+						<label class="make" for="card">身份证号码</label>
+						<input type="text" class="form-control" id="card" placeholder="请输入身份证号码">
+						<p class="msg" style="display: none;"></p>
+					</div>
+					<div class="form-group join-city form-group4">
+						<input type="hidden" name="nameJoinCity" id="nameJoinCity" value="" style="display: none;" />
+						<label class="make" for="nameJoinCity">计划加盟城市</label>
+						<div class="from-inline">
+							<div class="clearfloat" id="distpicker" data-type = "2" data-code = "" data-text=''>
+					    		<div class="form-group">
+					        		<select class="form-control" id="province1" data-province="请选择省"></select>
+					        		<span class="icon"></span>
+					        	</div>
+					        	<div class="form-group">
+					        		<select class="form-control" id="city1" data-city="请选择市"></select>
+					        		<span class="icon"></span>
+					        	</div>
+					        	<div class="form-group">
+					        		<select class="form-control" id="district1" data-district="请选择区"></select>
+					        		<span class="icon"></span>
+					        	</div>
+					    	</div>
+						</div>
+						<p class="msg" style="display: none;"></p>
+					</div>
+					<div class="form-group join-num form-group5">
+						<label class="make" for="num">计划加盟数量</label>
+						<div class="from-inline">
+							<div class="clearfloat join-number">
+					        	<div class="form-group">
+					        		<input type="text" name="num" class="form-control" id="num" placeholder="请输入计划加盟的机器数量"></input>
+					        	</div>
+					        	<div class="float_left"></div>
+					        	<div class="float_right"></div>
+					    	</div>
+						</div>
+						<p class="msg" style="display: none;"></p>
+					</div>
+					<div class="form-group form-group6">
+						<label class="make" for="">是否带有店铺</label>
+						<div class="from-inline clearfloat">
+							<div class="radio-inline active">是</div>
+							<div class="radio-inline">否</div>
+						</div>
+					</div>
+					<div class="form-group-content">
+						<div class="form-group form-group7">
+							<label class="make" for="joinarea">店铺经营项目和范围</label>
+							<input type="text" class="form-control" name="joinarea" id="joinarea" placeholder="请输入店铺经营项目和范围">
+							<p class="msg" style="display: none;"></p>
+						</div>
+						<div class="form-group form-group8">
+							<label class="make" for="details">店铺地址</label>
+							<div class="from-inline">
+								<div class="clearfloat" id="distpicker1" data-type = "2" data-code = "" data-text=''>
+						    		<div class="form-group">
+						        		<select class="form-control" id="province1" data-province="请选择省"></select>
+						        		<span class="icon"></span>
+						        	</div>
+						        	<div class="form-group">
+						        		<select class="form-control" id="city1" data-city="请输入市"></select>
+						        		<span class="icon"></span>
+						        	</div>
+						        	<div class="form-group">
+						        		<select class="form-control" id="district1" data-district="请输入区"></select>
+						        		<span class="icon"></span>
+						        	</div>
+						    	</div>
+						    	<br />
+						    	<input type="text" class="form-control" name="details" id="details" placeholder="请输入详细地址信息，如道路、门牌号、小区、楼栋号、单元室等。">
+							</div>
+							<p class="msg" style="display: none;"></p>
+						</div>
+					</div>
+					<div class="form-group form-group9" style="display: none;">
+						<input type="hidden" name="nameSetPosition" id="nameSetPosition" value="" style="display: none;" />
+						<label class="make" for="nameSetPosition">设点位置</label>
+						<div class="from-inline">
+							<div class="clearfloat" id="distpicker3" data-type = "2" data-code = "" data-text=''>
+					    		<div class="form-group">
+					        		<select class="form-control" id="province1" data-province="请选择省"></select>
+					        		<span class="icon"></span>
+					        	</div>
+					        	<div class="form-group">
+					        		<select class="form-control" id="city1" data-city="请选择市"></select>
+					        		<span class="icon"></span>
+					        	</div>
+					        	<div class="form-group">
+					        		<select class="form-control" id="district1" data-district="请选择区"></select>
+					        		<span class="icon"></span>
+					        	</div>
+					    	</div>
+						</div>
+						
+						<p class="msg" style="display: none;"></p>
+					</div>
+					<div class="form-submit-wrap">
+							<div class="submit">立即申请</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-wrap">
+			<div class="footer clearfloat">
+				<div class="footer_item">
+					<h4>联系我们</h4>
+					<ul>
+						<li><a href="#">公司地址：杭州市滨江区建业路511号华业大厦2308室</a></li>
+						<li><a href="#">公司专线：400-0169-682</a></li>
+						<li><a href="#">技术热线：0571-28107686</a></li>
+						<li><a href="#">客服热线：0571-28107307</a></li>
+						<li><a href="#">企业邮箱：hr@zs-info.cn</a></li>
+						<li><a href="#">公司传真：0571-28107686</a></li>
+					</ul>
+				</div>
+				<div class="footer_item">
+					<h4>商务合作</h4>
+					<ul>
+						<li><a href="#">软件开发服务：谢先生-13093717355</a></li>
+						<li><a href="#">果园直销服务：谢先生-13093717355</a></li>
+						<li><a href="#">渠道加盟服务：谢先生-13093717355</a></li>
+					</ul>
+				</div>
+				<div class="footer_item">
+					<div class="contact_us_box">
+						联系我们：<a href="tel:400-0169-682">400-0169-682</a>
+					</div>
+				</div>
+				<div class="footer_item clearfloat">
+					<dl>
+						<dt>
+							<img src="img/grh-wxCode.png"/>
+						</dt>
+						<dd>关注果然好微信公众号</dd>
+					</dl>
+					<dl>
+						<dt>
+							<img src="img/grh-app.png"/>
+						</dt>
+						<dd>下载果然好APP</dd>
+					</dl>
+					<dl>
+						<dt>
+							<img src="img/grh-bussiness-app.png"/>
+						</dt>
+						<dd>下载果然好-商户版APP</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				浙ICP备13029432号&nbsp;|&nbsp;Copyright2015-2018<br />杭州果康科技有限公司&nbsp;版权所有
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mobile-util.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/distpicker.data.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/distpicker.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var common = {
+				API : "http://61.164.118.194:8090/grh_api/server/api.do", // 测试
+				name:/^[\u4E00-\u9FA5\uf900-\ufa2d·s]{2,20}$/,
+				phone:/^(13[0-9]|14[0-9]|15[0-9]|16[0-9]|17[0-9]|18[0-9])\d{8}$/,
+				card: /^\d{15}$/,//(/^\d{15}$/)|(/^\d{18}$/)|(/^\d{17}(\d|X|x)$/)
+				card1:/^\d{18}$/,
+				card2:/^\d{17}(\d|X|x)$/,
+				num:/^(\+|-)?\d+($|\.\d+$)/,
+				getUrlParam : function ( mid ) {
+		            var reg = new RegExp("(^|&)" + mid + "=([^&]*)(&|$)");
+		            var r = window.location.search.substr(1).match(reg);
+		            if ( r != null ) 
+		            	return decodeURIComponent(r[2]); 
+		            return null;
+		        }
+			}
+			$.ajaxSetup({
+				url: common.API,
+				dataType: 'jsonp'
+			});
+			common.ajaxPost = function(data, done, fail, finish ){
+				done = typeof done !== 'function' ? function(){} : done;
+				fail = typeof fail !== 'function' ? function( d ){/*ZS.prompt(d.statusStr);*/console.error(d.statusStr)} : fail;
+				finish = typeof finish !== 'function' ? function(){} : finish;
+				$.ajax({
+					data : data,
+					success : done,
+					error : fail,
+					complete : finish
+				});
+			};
+			var pub = {
+				
+			};
+			pub.type = common.getUrlParam("type");
+			pub.data = {}
+			
+			pub.join = {
+				apiData:{
+					init:function(){
+						$("#distpicker").distpicker('reset', true);
+						$("#distpicker1").distpicker('reset', true);
+						$("#distpicker3").distpicker('reset', true);
+						if (pub.type == 'store') {
+							$("title").html("门店加盟");
+							$(".join-num").hide();
+							$(".join-city").show();
+						} else if (pub.type = 'watm') {
+							$("title").html("机器加盟");
+							$(".join-num").show();
+							$(".join-city").hide();
+							$(".form-group9").show();
+						}
+						
+					},
+					submitApplication:function(){
+						common.ajaxPost(pub.data,function(d){
+							if ( d.statusCode == '100000' ) {
+								layer.alert('恭喜你！申请成功', {
+									  skin: 'layui-layer-molv' //样式类名
+									  ,closeBtn: 0
+									}, function(){
+									  window.location.href = "cooperative_partner.html"
+									});
+							}else{
+								console.error(d.statusStr)
+							}
+						},function(d){
+							
+						})
+					}
+				},
+				eventHandule:{
+					init:function(){
+						$(".nav-menu").on("click",function(){
+							$('.nav-wrap').slideDown();
+							$("body").css("overflow-y","hidden")
+						});
+						$(".nav-close").on("click",function(){
+							$('.nav-wrap').slideUp();
+							$("body").css("overflow-y","auto")
+						});
+						$(".from-inline .radio-inline").on("click",function(){
+							var istrue = $(this).is(".active");
+							!istrue ? $(this).addClass("active").siblings().removeClass("active") : ''; 
+							if ($(this).text() == "否") {
+								$(".form-group-content").hide();
+							}else{
+								$(".form-group-content").show();
+							}
+						});
+						$(".join-number .float_left").on("click",function(){
+							var n = $("#num").val();
+							if (n != '' && n !=0) {
+								$("#num").val(parseInt(n)-1)
+							}
+						})
+						$(".join-number .float_right").on("click",function(){
+							var n = $("#num").val();
+							console.log(n)
+							if (n == '') {
+								$("#num").val(1)
+							}else{
+								$("#num").val(parseInt(n)+1)
+							}
+						});
+						$("#num").on("blur",function(){
+							var n = $("#num").val();
+							if(n==''){
+								$("#num").val(0)
+							}else if (!common.num.test(n)){
+								$("#num").val(1)
+							}else{
+								$("#num").val(Math.abs(parseInt(n)))
+							}
+						})
+						$(".submit").on("click",function(){
+							/*
+							private String name;//申请人姓名
+							private String mobile;//申请人手机
+							private String idCard;//身份证号
+							private String hasShop;//是否有实体店 1：有， -1：没有
+							private String position;//设点位置/加盟城市名称（县级）
+							private String positionCode;//设点位置/加盟城市区划编码
+							
+							//机器加盟特有
+							private int watmNum;//计划加盟机器数量
+							//机器加盟特有
+							
+							//如果有实体店，实体店的字段
+							private String businessScope;//经营范围
+							private String shopAddr;//店铺地址区划名称
+							private String shopAddrCode;//店铺地址编码
+							
+							private String detailedAddr;//详细地址
+							*/
+							var Verification = true;
+								getfocus = null;
+							
+							pub.data["method"] = 'apply_for';
+							pub.data["name"] = $("#name").val();
+							pub.data["mobile"] = $("#phone").val();
+							pub.data["idCard"] = $("#card").val();
+							
+							pub.data["hasShop"] = $(".radio-inline.active").html() == "是" ? 1 : 0 ;
+							//判断并做出相应的提示
+							//姓名
+							if (pub.data["name"] == '') {
+								$(".form-group1 .msg").html('请输入姓名').show();
+								Verification = false;
+								if (getfocus == null) {
+									getfocus = "name"
+								}
+							}else{
+								$(".form-group1 .msg").hide();
+							}
+							//手机号
+							if (pub.data["mobile"] == '') {
+								$(".form-group2 .msg").html('请输入手机号码').show();
+								Verification = false;
+								if (getfocus == null) {
+									getfocus = "phone"
+								}
+							}else if (!common.phone.test(pub.data["mobile"])){
+								$(".form-group2 .msg").html('请输入正确的手机号码').show();
+								Verification = false;
+								if (getfocus == null) {
+									getfocus = "phone"
+								}
+							}else{
+								$(".form-group2 .msg").hide()
+							}
+							//身份证号码
+							if(pub.data["idCard"] == ''){
+								$(".form-group3 .msg").html('请输入身份证号码').show();
+								Verification = false;
+								if (getfocus == null) {
+									getfocus = "card"
+								}
+							}else if (common.card.test(pub.data["idCard"]) || common.card1.test(pub.data["idCard"]) || common.card2.test(pub.data["idCard"])) {
+								$(".form-group3 .msg").hide();
+							}else{
+								$(".form-group3 .msg").html('请输入正确的身份证号码').show();
+								Verification = false;
+								if (getfocus == null) {
+									getfocus = "card"
+								}
+							}
+							//是否带店铺
+							if (pub.data["hasShop"] == 1) {
+								//经营范围
+								pub.data["businessScope"] = $("#joinarea").val();
+								pub.data["detailedAddr"] = $("#details").val();
+								//经营范围
+								if (pub.data["businessScope"] == '') {
+									$(".form-group7 .msg").html('请输入经营范围').show();
+									Verification = false;
+									if (getfocus == null) {
+										getfocus = "joinarea"
+									}
+								}else{
+									$(".form-group7 .msg").hide();
+								}
+								
+								
+								var el = $("#distpicker1");//店铺地址
+								//、 1:表示是OK的；2表示需要输入省；3：表示需要选择市；4表示需要选择区
+								if (el.attr("data-type") == 1) {
+									$(".form-group8 .msg").hide();
+									pub.data["shopAddr"] = el.attr("data-text");
+									pub.data["positionCode"] = el.attr("data-code");
+										//详细地址
+									if (pub.data["detailedAddr"] == '') {
+										$(".form-group8 .msg").html('请输入详细地址').show();
+										Verification = false;
+										if (getfocus == null) {
+											getfocus = "details"
+										}
+									}else{
+										$(".form-group8 .msg").hide();
+									}
+								}else if( el.attr("data-type") == 2){
+									$(".form-group8 .msg").html("请选择省").show();
+									Verification = false;
+									if (getfocus == null) {
+										getfocus = "nameJoinCity"
+									}
+								}else if( el.attr("data-type") == 3){
+									$(".form-group8 .msg").html("请选择市").show();
+									Verification = false;
+									if (getfocus == null) {
+										getfocus = "nameJoinCity"
+									}
+								}else if( el.attr("data-type") == 4){
+									$(".form-group8 .msg").html("请选择区").show();
+									Verification = false;
+									if (getfocus == null) {
+										getfocus = "nameJoinCity"
+									}
+								}
+								
+							}
+							
+							if (pub.type == 'store') {
+								var el = $("#distpicker");//加盟地址
+								//、 1:表示是OK的；2表示需要输入省；3：表示需要选择市；4表示需要选择区
+								if (el.attr("data-type") == 1) {
+									$(".form-group4 .msg").hide();
+									pub.data["position"] = el.attr("data-text");
+									pub.data["positionCode"] = el.attr("data-code");
+								}else if( el.attr("data-type") == 2){
+									$(".form-group4 .msg").html("请选择省").show();
+									Verification = false;
+									if (getfocus == null) {
+										getfocus = "nameSetPosition"
+									}
+								}else if( el.attr("data-type") == 3){
+									$(".form-group4 .msg").html("请选择市").show();
+									Verification = false;
+									if (getfocus == null) {
+										getfocus = "nameSetPosition"
+									}
+								}else if( el.attr("data-type") == 4){
+									$(".form-group4 .msg").html("请选择区").show();
+									Verification = false;
+									if (getfocus == null) {
+										getfocus = "nameSetPosition"
+									}
+								}
+							} else if (pub.type = 'watm') {
+								
+								pub.data["watmNum"] = $("#num").val();
+								if (pub.data["watmNum"] != '' && pub.data["watmNum"] != 0) {
+									$(".form-group5 .msg").hide();
+								}else{
+									$(".form-group5 .msg").html("请输入加盟机器数量").show();
+									Verification = false;
+									if (getfocus == null) {
+										getfocus = "num"
+									}
+								}
+								var el = $("#distpicker3");//设点地址
+								//、 1:表示是OK的；2表示需要输入省；3：表示需要选择市；4表示需要选择区
+								if (el.attr("data-type") == 1) {
+									$(".form-group9 .msg").hide();
+									pub.data["position"] = el.attr("data-text");
+									pub.data["positionCode"] = el.attr("data-code");
+								}else if( el.attr("data-type") == 2){
+									$(".form-group9 .msg").html("请选择省").show();
+									Verification = false;
+									if (getfocus == null) {
+										getfocus = "nameSetPosition"
+									}
+								}else if( el.attr("data-type") == 3){
+									$(".form-group9 .msg").html("请选择市").show();
+									Verification = false;
+									if (getfocus == null) {
+										getfocus = "nameSetPosition"
+									}
+								}else if( el.attr("data-type") == 4){
+									$(".form-group9 .msg").html("请选择区").show();
+									Verification = false;
+									if (getfocus == null) {
+										getfocus = "nameSetPosition"
+									}
+								}
+							};
+							
+							if (Verification ) {
+								pub.join.apiData.submitApplication();
+							}else{
+								$("#"+getfocus).focus()
+							}
+							
+							
+							
+						});
+						$("#distpicker").on("change","select",function(){
+							var bindele = $("#distpicker");
+							setdata(bindele)
+						})
+						$("#distpicker1").on("change","select",function(){
+							var bindele = $("#distpicker1");
+							setdata(bindele)
+						});
+						$("#distpicker3").on("change","select",function(){
+							var bindele = $("#distpicker3");
+							setdata(bindele)
+						});
+						function setdata (bindele){
+							var els = bindele.find("option:selected");
+							var arrtext = [],arrcode = [];
+							
+							var filterData = ["110000","120000","310000","500000"];//北京，天津，上海，重庆
+							var filterData = ['710000'];
+							els.each(function(i,v){
+								arrtext.push($(v).attr('value'));
+								arrcode.push($(v).attr("data-code"))
+							});
+							
+							//type 1:表示是OK的；2表示需要输入省；3：表示需要选择市；4表示需要选择区
+							if (arrcode[0] == '') {
+								bindele.attr("data-type","2");
+								bindele.attr("data-code","");
+								bindele.attr("data-msg","请选择省");
+								bindele.attr("data-text",'')
+							}else if (arrcode[0] == "710000" || arrcode[0] == "810000" || arrcode[0] == "820000") {
+								bindele.attr("data-type","1");
+								bindele.attr("data-msg",'');
+								if (arrcode[2] != '') {
+									bindele.attr("data-code",arrcode[2]);
+									bindele.attr("data-text",arrtext[2]);
+									return;
+								}
+								if (arrcode[1] != '') {
+									bindele.attr("data-code",arrcode[1]);
+									bindele.attr("data-text",arrtext[1]);
+									return;
+								}
+								bindele.attr("data-code",arrcode[0]);
+								bindele.attr("data-text",arrtext[0]);
+								
+							}else if ( arrcode[0] == '110000' || arrcode[0] == '120000' || arrcode[0] == '310000' || arrcode[0] == '500000') {
+								
+								if (arrcode[2] == '') {
+									if (arrcode[1] == '') {
+										bindele.attr("data-type","3");
+										bindele.attr("data-code",arrcode[1]);
+										bindele.attr("data-msg",'请选择市');
+										bindele.attr("data-text",'')
+									}else{
+										bindele.attr("data-type","1");
+										bindele.attr("data-code",arrcode[1]);
+										bindele.attr("data-msg",'');
+										bindele.attr("data-text",arrtext[1])
+									}
+								}else{
+									bindele.attr("data-type","1");
+									bindele.attr("data-code",arrcode[2]);
+									bindele.attr("data-msg",'');
+									bindele.attr("data-text",arrtext[0] + arrtext[2])
+								}
+								
+							}else{
+								if (arrcode[1] == '') {
+									bindele.attr("data-type","3");
+									bindele.attr("data-code",arrcode[1]);
+									bindele.attr("data-msg",'请选择市');
+									bindele.attr("data-text","")
+									return;
+								}
+								if (arrcode[2] == '') {
+									bindele.attr("data-type","4");
+									bindele.attr("data-code",arrcode[1]);
+									bindele.attr("data-msg",'请选择区');
+									bindele.attr("data-text","")
+									return;
+								}
+								bindele.attr("data-type","1");
+								bindele.attr("data-code",arrcode[2]);
+								bindele.attr("data-msg",'');
+								bindele.attr("data-text",arrtext[0] + arrtext[1] + arrtext[2])
+								
+							}
+						}
+					}
+				}
+			}
+			
+			
+			
+			pub.init = function(){
+				pub.join.apiData.init();
+				pub.join.eventHandule.init();
+			}
+			pub.init()
+			
+		})
+	</script>
+</html>

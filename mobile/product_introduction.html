@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>公司简介</title>
+		<meta content="telephone=no, address=no" name="format-detection" />
+		<meta name="viewport" content="width=750,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="css/rest.css"/>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+	</head>
+	<body>
+		<div class="header-wrap">
+			<div class="header clearfloat">
+				<div class="logo_box float_left">
+					<img src="img/logo.png"/>
+				</div>
+				<div class="nav-menu float_right">
+					<img src="img/nav-menu.png"/>
+				</div>
+			</div>
+		</div>
+		<div class="nav-wrap">
+			<div class="nav-close-line">
+				<div class="nav-close float_right"></div>
+			</div>
+			<ul class="nav">
+				<li><a href="index.html">首页</a></li>
+			  	<li><a href="company_introduction.html">公司简介</a></li>
+			  	<li class="active"><a href="#">产品介绍</a></li>
+			  	<li><a href="download.html">APP下载</a></li>
+			  	<li><a href="cooperative_partner.html">招商加盟</a></li>
+			  	<li><a href="join.html">招贤纳士</a></li>
+			</ul>
+		</div>
+		<div class="banner-wrap product_banner">
+			
+		</div>
+		<div class="main-wrap">
+			<div class="main-wrap-product1">
+				<div class="main_inner_area clearfloat">
+					<div class="nav_item active">
+						家庭套餐
+					</div>
+					<div class="nav_item">
+						白领专享
+					</div>
+					<div class="nav_item">
+						企业福利
+					</div>
+				</div>
+			</div>
+			<div class="main-wrap-product2">
+				<div class="main_inner_area clearfloat">
+					
+				</div>
+			</div>
+		</div>
+		<div class="footer-wrap">
+			<div class="footer clearfloat">
+				<div class="footer_item">
+					<h4>联系我们</h4>
+					<ul>
+						<li><a href="#">公司地址：杭州市滨江区建业路511号华业大厦2308室</a></li>
+						<li><a href="#">公司专线：400-0169-682</a></li>
+						<li><a href="#">技术热线：0571-28107686</a></li>
+						<li><a href="#">客服热线：0571-28107307</a></li>
+						<li><a href="#">企业邮箱：hr@zs-info.cn</a></li>
+						<li><a href="#">公司传真：0571-28107686</a></li>
+					</ul>
+				</div>
+				<div class="footer_item">
+					<h4>商务合作</h4>
+					<ul>
+						<li><a href="#">软件开发服务：谢先生-13093717355</a></li>
+						<li><a href="#">果园直销服务：谢先生-13093717355</a></li>
+						<li><a href="#">渠道加盟服务：谢先生-13093717355</a></li>
+					</ul>
+				</div>
+				<div class="footer_item">
+					<div class="contact_us_box">
+						联系我们：<a href="tel:400-0169-682">400-0169-682</a>
+					</div>
+				</div>
+				<div class="footer_item clearfloat">
+					<dl>
+						<dt>
+							<img src="img/grh-wxCode.png"/>
+						</dt>
+						<dd>关注果然好微信公众号</dd>
+					</dl>
+					<dl>
+						<dt>
+							<img src="img/grh-app.png"/>
+						</dt>
+						<dd>下载果然好APP</dd>
+					</dl>
+					<dl>
+						<dt>
+							<img src="img/grh-bussiness-app.png"/>
+						</dt>
+						<dd>下载果然好-商户版APP</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				浙ICP备13029432号&nbsp;|&nbsp;Copyright2015-2018<br />杭州果康科技有限公司&nbsp;版权所有
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mobile-util.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../dest/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".nav-menu").on("click",function(){
+				$('.nav-wrap').slideDown();
+				$("body").css("overflow-y","hidden")
+			});
+			$(".nav-close").on("click",function(){
+				$('.nav-wrap').slideUp();
+				$("body").css("overflow-y","auto")
+			});
+			var data = [{
+				"arr":[{
+					'src':"img/product_icon_0101.png",
+					'text':'鲜果礼盒'
+				},{
+					'src':"img/product_icon_0102.png",
+					'text':'鲜果礼盒'
+				},{
+					'src':"img/product_icon_0103.png",
+					'text':'果盘'
+				},{
+					'src':"img/product_icon_0104.png",
+					'text':'果盘'
+				}]
+			},{
+				"arr":[{
+					'src':"img/product_icon_0201.png",
+					'text':'缤纷果茶'
+				},{
+					'src':"img/product_icon_0202.png",
+					'text':'水果杯'
+				},{
+					'src':"img/product_icon_0203.png",
+					'text':'水果盒子'
+				},{
+					'src':"img/product_icon_0204.png",
+					'text':'水果捞'
+				},{
+					'src':"img/product_icon_0205.png",
+					'text':'水果沙拉'
+				},{
+					'src':"img/product_icon_0206.png",
+					'text':'水果粥'
+				}]
+			},{
+				"arr":[{
+					'src':"img/product_icon_0301.png",
+					'text':'创意果盘',
+				},{
+					'src':"img/product_icon_0302.png",
+					'text':'果切'
+				},{
+					'src':"img/product_icon_0303.png",
+					'text':'果汁'
+				},{
+					'src':"img/product_icon_0304.png",
+					'text':'会议果盘'
+				},{
+					'src':"img/product_icon_0305.png",
+					'text':'水果蛋糕'
+				},{
+					'src':"img/product_icon_0306.png",
+					'text':'水果糕点'
+				},{
+					'src':"img/product_icon_0307.png",
+					'text':'鲜榨果汁'
+				}]
+			}]
+			$(".main-wrap-product1 .nav_item").on("click",function(){
+				var index = $(this).index();
+				if (!$(this).is(".active")) {
+					$(this).addClass("active").siblings().removeClass("active");
+					contentInit(data[index].arr)
+				}			
+			});
+			function contentInit(data){
+				var ele = $(".main-wrap-product2 .main_inner_area");
+				var html = '';
+				for (var i in data) {
+					console.log(data[i])
+					html += '<dl>'
+					html += '<dt><img src="'+data[i].src+'"/></dt>'
+					html += '<dd>'+data[i].text+'</dd>'
+					html += '</dl>'
+				};
+				ele.html(html)
+			};
+			contentInit(data[0].arr)
+		})
+	</script>
+</html>
