@@ -30,7 +30,6 @@
 		<div class="banner-wrap">
 			<div class="index-banner" style="transition: 500ms ease; transform: translate3d(0px,0px, 0px);">
 				<div class="banner_page banner_page1">
-					
 				</div>
 				<div class="banner_page banner_page2">
 					
@@ -74,10 +73,8 @@
 					</div>
 				</div>
 				<div class="banner_page banner_page3">
-					
 				</div>
 				<div class="banner_page banner_page4">
-					
 				</div>
 				<div class="banner_page banner_page5">
 					<div class="white-area"></div>
@@ -148,7 +145,8 @@
 				var $this = $(this);
 				$(this).addClass("active").siblings().removeClass("active")
 			});
-			var h = window.screen.height - $(".header-wrap").height();
+			var h = window.innerHeight - $(".header-wrap").height();
+			
 			var w = window.screen.width;
 			//$(".index-banner .banner_page").height(h);
 			var arrow = $("#J_gonext");

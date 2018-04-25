@@ -23,7 +23,7 @@
 				  <li><a href="company_introduction.html">公司简介</a></li>
 				  <li><a href="product_introduction.html">产品介绍</a></li>
 				  <li><a href="download.html">APP下载</a></li>
-				  <li class="active"><a href="#">招商加盟</a></li>
+				  <li class="active"><a href="cooperative_partner.html">招商加盟</a></li>
 				  <li><a href="join.html">招贤纳士</a></li>
 				</ul>
 			</div>
@@ -189,7 +189,7 @@
 			
 			
 			var common = {
-				API : "http://61.164.118.194:8090/grh_api/server/api.do", // 测试
+				API : "http://api.grhao.com/server/api.do", // 正式
 				name:/^[\u4E00-\u9FA5\uf900-\ufa2d·s]{2,20}$/,
 				phone:/^(13[0-9]|14[0-9]|15[0-9]|16[0-9]|17[0-9]|18[0-9])\d{8}$/,
 				card: /^\d{15}$/,//(/^\d{15}$/)|(/^\d{18}$/)|(/^\d{17}(\d|X|x)$/)
@@ -394,7 +394,7 @@
 								if (el.attr("data-type") == 1) {
 									$(".form-group8 .msg").hide();
 									pub.data["shopAddr"] = el.attr("data-text");
-									pub.data["positionCode"] = el.attr("data-code");
+									pub.data["shopAddrCode"] = el.attr("data-code");
 										//详细地址
 									if (pub.data["detailedAddr"] == '') {
 										$(".form-group8 .msg").html('请输入详细地址').show();
@@ -592,12 +592,6 @@
 					}
 				}
 			}
-			
-			
-			
-			var h = window.screen.height - $(".header-wrap").height();
-			var w = window.screen.width;
-			
 			pub.init = function(){
 				pub.join.apiData.init();
 				pub.join.eventHandule.init();

@@ -35,7 +35,7 @@ input[type="color"]:focus,
 .header .nav > li > a{padding: 0 25px;font-size: 18px;color: #333333;line-height: 100px;}
 .header .nav > li.active > a{color: #93bf1d;}
 .nav > li > a:hover, .nav > li > a:focus{background:none ;color: #93bf1d;}
-.banner-wrap{width: 100%;top: 100px;z-index: 10;height: 500px;padding-top: 100px;}
+.banner-wrap{width: 100%;z-index: 10;height: 500px;}
 .index_body .banner-wrap{height: 100%;}
 .banner-wrap .index-banner{height: 100%;}
 .index-banner .banner_page1{background: url(../img/index-banner1.png) no-repeat top center;background-size:cover ;}
@@ -51,8 +51,9 @@ input[type="color"]:focus,
 .banner_page2 .banner_inner_item .txt{color: #333333;font-size: 14px;line-height: 24px;}
 .banner_page2 .banner_inner_item .title{color: #333333;font-size: 24px;line-height: 60px;}
 .white-area{height: 25%;}
-.black-area{background: #353535;height: 75%;padding-top: 10%; position: relative;min-height: 560px;}
-.black-area .footer-copyright{position: absolute;bottom: 30px;}
+.black-area{background: #353535;height: 75%;padding-top: 6%; position: relative;}
+
+.black-area .footer-copyright{position: absolute;bottom: 0;left: 50%;margin-left: -600px;}
 
 .laynext { position: relative; z-index: 99; line-height: 0; height: 0;top: 100%; left: 0; }
 .go-next {text-decoration: none; text-align: center; color: #ffffff; font-size: 36px; position: absolute; bottom: 50px; left: 50%; margin-left: -30px; display: block; width:60px; height: 60px; background: url(../img/downArrowblack.png) no-repeat center; line-height:60px; z-index: 99; cursor: pointer;}
@@ -66,13 +67,15 @@ input[type="color"]:focus,
 .onepage-pagination .active .dotted {border-color: #93bf1d; background-color:#93bf1d !important;}
 	
 .footer-wrap{width: 100%;background: #353535;padding-top: 120px;}
-.footer{width: 1200px;margin: 0 auto;color: #fefefe;padding-bottom: 80px;}
+.footer{width: 1200px;margin: 0 auto;color: #fefefe;}
 .footer a{color: #FEFEFE;}
 .footer .footer_item{padding: 0 20px;}
 .footer .footer_item:first-child{width: 460px;}
 .footer_item.float_left h4{font-size: 18px;}
 .footer_item.float_left ul{padding: 0;margin: 0;font-size: 14px;}
 .footer_item.float_left ul a{font-size: 14px;line-height: 32px;}
+.footer_item.float_right dl{margin: 0;}
+.footer_item.float_right dl dd{text-align: center;margin: 0;line-height: 30px;}
 .footer-copyright{color: #999999;font-size: 12px;line-height: 22px;text-align: center;padding: 18px 0;margin: 0 auto;width: 1200px;}
 
 
@@ -141,7 +144,7 @@ input[type="color"]:focus,
 .main-wrap-product2 dl dd{font-size: 26px;color: #333;line-height: 60px;}
 /*app下载*/
 .banner-wrap.download_banner{background: url(../img/banner05.png) no-repeat center 100px;height: 723px;}
-.download_banner .banner_inner{width: 1200px;margin: 0 auto;padding-left: 185px;padding-top: 66px;padding-right: 120px;}
+.download_banner .banner_inner{width: 1200px;margin: 0 auto;padding-left: 185px;padding-top: 166px;padding-right: 120px;}
 .banner_inner_left{width: 270px;height: 556px;background: url(../img/download01.png) no-repeat center;float: left;}
 .banner_inner_right{width: 480px;padding-top: 70px;float: right;}
 .banner_inner_right .erCode_item{width: 50%;float: left;padding: 0 42px;text-align: center;}

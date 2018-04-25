@@ -127,31 +127,6 @@
 				$(this).addClass("active").siblings().removeClass("active")
 			});
 			
-			var h = window.screen.height - $(".header-wrap").height();
-			var w = window.screen.width;
-			
-			function submitApplication(){
-				var data = {
-					'method':'apply_for',
-					name:'123',//申请人姓名
-					mobile:'18315318515',//申请人手机
-					idCard:'411221188006190000',//身份证号
-					hasShop:'1',//是否有实体店 1：有， -1：没有
-					position:'浙江省杭州市滨江区',//设点位置/加盟城市
-					businessScope:'123',//经营范围
-					shopAddr:'123',//店铺地址
-				}
-				common.ajaxPost(data,function(d){
-					if ( d.statusCode == '100000' ) {
-						console.log(d)
-					}else{
-						alert(d.statusStr)
-					}
-				},function(d){
-					
-				})
-			}
-			submitApplication()
 		})
 	</script>
 </html>

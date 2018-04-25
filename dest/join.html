@@ -53,17 +53,20 @@
 					<div class="main_join_describe">
 						<p>招聘流程：简历投递  丨  简历筛选  丨  现场面试  丨  发放offer  丨  办理入职。</p>
 						<p>公司福利：果然好处于快速发展期，公司提供有竞争力的薪酬待遇。缴纳五险一金，节日福利和集体旅游等；包括伙食补贴、防暑降温补贴、生日礼物、免费水果茶点等。我们经常举办很多集体活动，如先进集体旅游、行业间参观访问等。</p>
-						<p>工作地点：公司总部位于杭州滨江，杭州站江虹店位于滨江区江二路57号人工智能产业园A座104室，仓库位于滨江区西兴街道滨文路5-2A号福世大厦102室，果然好会合理安排就职地点。</p>
+						<p>工作地点：公司总部位于杭州市滨江区滨安路511号华业大厦2308室<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;杭州站江虹店位于滨江区江二路57号人工智能产业园A座104室<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;仓库位于滨江区西兴街道滨文路5-2A号福世大厦102室<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;果然好会合理安排就职地点。</p>
 					</div>
 					<div class="main_join_map clearfloat">
+						<div class="mian_join_map_item" >
+							<div id="mapContainer3"></div>
+						</div>
 						<div class="mian_join_map_item" >
 							<div id="mapContainer1"></div>
 						</div>
 						<div class="mian_join_map_item" >
 							<div id="mapContainer2"></div>
-						</div>
-						<div class="mian_join_map_item" >
-							<div id="mapContainer3"></div>
 						</div>
 					</div>
 				</div>
@@ -109,7 +112,7 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 			var common = {
-				API : "http://61.164.118.194:8090/grh_api/server/api.do" // 测试
+				API : "http://api.grhao.com/server/api.do"//' 正式'
 			}
 			$.ajaxSetup({
 				url: common.API,
@@ -249,28 +252,6 @@
 		        });
 		        openInfoWin3();
 		    });
-			function submitApplication(){
-				var data = {
-					'method':'apply_for',
-					name:'123',//申请人姓名
-					mobile:'18315318515',//申请人手机
-					idCard:'411221188006190000',//身份证号
-					hasShop:'1',//是否有实体店 1：有， -1：没有
-					position:'浙江省杭州市滨江区',//设点位置/加盟城市
-					businessScope:'123',//经营范围
-					shopAddr:'123',//店铺地址
-				}
-				common.ajaxPost(data,function(d){
-					if ( d.statusCode == '100000' ) {
-						console.log(d)
-					}else{
-						alert(d.statusStr)
-					}
-				},function(d){
-					
-				})
-			}
-			//submitApplication()
 		})
 	</script>
 </html>
