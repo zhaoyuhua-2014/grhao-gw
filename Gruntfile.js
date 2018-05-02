@@ -60,7 +60,7 @@ module.exports = function (grunt) {
         grunt.log.write('自定义命令 : \n  api: 切换接口地址 \n     参数列表\n\tdev -> 测试\n\tloc -> 本地 \n\tpro -> 正式');
     });
 
-    grunt.registerTask('api','api adress',function( address ){
+    grunt.registerTask('api','adress , type',function( address ,type ){
         var pathname = ['dest/join_us_from.html','dest/join.html','mobile/join_us_from.html','mobile/join.html'];
         //var reg = /[\'|\"](http\:\/\/.+(\/server\/api\.do)[\'|\"]\,.*)/g;
         var reg = /(API).*[\:].*[\,].*/g;
@@ -72,26 +72,56 @@ module.exports = function (grunt) {
             // loc : ["http://192.168.1.12:8080/server/api.do",' 本地'],
             pro : ['API:'+'"http://api.grhao.com/server/api.do"',' 正式']
         };
-        var commonJs = grunt.file.read( pathname[0], encoding );
-            !address ? grunt.log.write( commonJs.match( reg ) ) : grunt.file.write(
-                   pathname[0], 
-                   commonJs.replace( reg, json[address][0] + '\, \/\/' + json[address][1])
-               ); 
-        var commonJs1 = grunt.file.read( pathname[1], encoding );
-            !address ? grunt.log.write( commonJs1.match( reg ) ) : grunt.file.write(
-                   pathname[1], 
-                   commonJs1.replace( reg, json[address][0] + '\, \/\/' + json[address][1])
-               );
-        var commonJs2 = grunt.file.read( pathname[2], encoding );
-            !address ? grunt.log.write( commonJs2.match( reg ) ) : grunt.file.write(
-                   pathname[2], 
-                   commonJs2.replace( reg, json[address][0] + '\, \/\/' + json[address][1])
-               );
-        var commonJs3 = grunt.file.read( pathname[3], encoding );
-            !address ? grunt.log.write( commonJs3.match( reg ) ) : grunt.file.write(
-                   pathname[3], 
-                   commonJs3.replace( reg, json[address][0] + '\, \/\/' + json[address][1])
-               ); 
+        console.log(address);
+        
+        console.log(type);
+        if (!type) {
+        	var commonJs = grunt.file.read( pathname[0], encoding );
+	            !address ? grunt.log.write( commonJs.match( reg ) ) : grunt.file.write(
+	                   pathname[0], 
+	                   commonJs.replace( reg, json[address][0] + '\, \/\/' + json[address][1])
+	               ); 
+	        var commonJs1 = grunt.file.read( pathname[1], encoding );
+	            !address ? grunt.log.write( commonJs1.match( reg ) ) : grunt.file.write(
+	                   pathname[1], 
+	                   commonJs1.replace( reg, json[address][0] + '\, \/\/' + json[address][1])
+	               );
+	        var commonJs2 = grunt.file.read( pathname[2], encoding );
+	            !address ? grunt.log.write( commonJs2.match( reg ) ) : grunt.file.write(
+	                   pathname[2], 
+	                   commonJs2.replace( reg, json[address][0] + '\, \/\/' + json[address][1])
+	               );
+	        var commonJs3 = grunt.file.read( pathname[3], encoding );
+	            !address ? grunt.log.write( commonJs3.match( reg ) ) : grunt.file.write(
+	                   pathname[3], 
+	                   commonJs3.replace( reg, json[address][0] + '\, \/\/' + json[address][1])
+	               ); 
+        }
+        if (type == "web") {
+        	var commonJs = grunt.file.read( pathname[0], encoding );
+	            !address ? grunt.log.write( commonJs.match( reg ) ) : grunt.file.write(
+	                   pathname[0], 
+	                   commonJs.replace( reg, json[address][0] + '\, \/\/' + json[address][1])
+	               ); 
+	        var commonJs1 = grunt.file.read( pathname[1], encoding );
+	            !address ? grunt.log.write( commonJs1.match( reg ) ) : grunt.file.write(
+	                   pathname[1], 
+	                   commonJs1.replace( reg, json[address][0] + '\, \/\/' + json[address][1])
+	               );
+        }
+        if (type == "mobile") {
+        	 var commonJs2 = grunt.file.read( pathname[2], encoding );
+	            !address ? grunt.log.write( commonJs2.match( reg ) ) : grunt.file.write(
+	                   pathname[2], 
+	                   commonJs2.replace( reg, json[address][0] + '\, \/\/' + json[address][1])
+	               );
+	        var commonJs3 = grunt.file.read( pathname[3], encoding );
+	            !address ? grunt.log.write( commonJs3.match( reg ) ) : grunt.file.write(
+	                   pathname[3], 
+	                   commonJs3.replace( reg, json[address][0] + '\, \/\/' + json[address][1])
+	               ); 
+        }
+        
          
     });
 	//更新每个HTML下面的seajs保证微信下清除缓存

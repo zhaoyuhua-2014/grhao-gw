@@ -2,9 +2,12 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>公司简介</title>
+		<title>果然好-招贤纳士</title>
 		<meta content="telephone=no, address=no" name="format-detection" />
 		<meta name="viewport" content="width=750,user-scalable=no" />
+		<link rel="shortcut icon" href="img/grh-favicon.ico" type="image/x-icon">
+		<meta name="description" content="果然好 -水果生鲜O2O消费平台，提供各类水果生鲜优质商品，同时提供商家机器加盟及门店加盟，让你安心享受绿色健康的生活！">
+		<meta name="keyword" content="水果生鲜，企业下午茶，水果自动售货机，线下门店加盟">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
 		<link rel="stylesheet" type="text/css" href="css/rest.css"/>
 		<link rel="stylesheet" type="text/css" href="css/base.css"/>
@@ -127,11 +130,11 @@
 	</body>
 	<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/mobile-util.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../dest/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			var common = {
-				API : "http://61.164.118.194:8090/grh_api/server/api.do" // 测试
+				API:"http://api.grhao.com/server/api.do", // 正式
 			}
 			$.ajaxSetup({
 				url: common.API,
@@ -168,7 +171,7 @@
 							html = '';
 						if (!!data && data.length != 0) {
 							for (var i in data) {
-								html += '<a class="main_join_table_line clearfloat" target="_Blank"  href= "'+(!!data[i].url ? data[i].url: "")+'">'
+								html += '<a class="main_join_table_line clearfloat"  href= "'+(!!data[i].url ? data[i].url: "")+'">'
 								html += '	<div class="join_table_item">'+ data[i].position +'</div>'
 								html += '	<div class="join_table_item">'+ data[i].salary +'</div>'
 								html += '	<div class="join_table_item">'+ data[i].count +'</div>'

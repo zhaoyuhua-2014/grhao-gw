@@ -3,8 +3,12 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>招商加盟</title>
+		<meta content="telephone=no, address=no" name="format-detection" />
+		<meta name="viewport" content="width=750,user-scalable=no" />
+		<link rel="shortcut icon" href="img/grh-favicon.ico" type="image/x-icon">
+		<meta name="description" content="果然好 -水果生鲜O2O消费平台，提供各类水果生鲜优质商品，同时提供商家机器加盟及门店加盟，让你安心享受绿色健康的生活！">
+		<meta name="keyword" content="水果生鲜，企业下午茶，水果自动售货机，线下门店加盟">
+		<title>果然好-招商加盟</title>
 		<link rel="stylesheet" type="text/css" href="css/rest.css"/>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
 		<link rel="stylesheet" type="text/css" href="css/base.css"/>
@@ -14,19 +18,25 @@
 		<div class="header-wrap">
 			<div class="header clearfloat">
 				<div class="logo_box float_left">
-					<a href="index.html">
-						<img src="img/logo.png"/>
-					</a>
+					<img src="img/logo.png"/>
 				</div>
-				<ul class="nav float_right clearfloat">
-				  <li><a href="index.html">首页</a></li>
-				  <li><a href="company_introduction.html">公司简介</a></li>
-				  <li><a href="product_introduction.html">产品介绍</a></li>
-				  <li><a href="download.html">APP下载</a></li>
-				  <li class="active"><a href="cooperative_partner.html">招商加盟</a></li>
-				  <li><a href="join.html">招贤纳士</a></li>
-				</ul>
+				<div class="nav-menu float_right">
+					<img src="img/nav-menu.png"/>
+				</div>
 			</div>
+		</div>
+		<div class="nav-wrap">
+			<div class="nav-close-line">
+				<div class="nav-close float_right"></div>
+			</div>
+			<ul class="nav">
+				<li><a href="index.html">首页</a></li>
+			  	<li><a href="company_introduction.html">公司简介</a></li>
+			  	<li><a href="product_introduction.html">产品介绍</a></li>
+			  	<li><a href="download.html">APP下载</a></li>
+			  	<li class="active"><a href="#">招商加盟</a></li>
+			  	<li><a href="join.html">招贤纳士</a></li>
+			</ul>
 		</div>
 		<div class="main-wrap from-wrap">
 			<div class="main_wrap_from">
@@ -189,7 +199,7 @@
 			
 			
 			var common = {
-				API:"http://61.164.118.194:8090/grh_api/server/api.do", // 测试
+				API:"http://api.grhao.com/server/api.do", // 正式
 				name:/^[\u4E00-\u9FA5\uf900-\ufa2d·s]{2,20}$/,
 				phone:/^(13[0-9]|14[0-9]|15[0-9]|16[0-9]|17[0-9]|18[0-9])\d{8}$/,
 				card: /^\d{15}$/,//(/^\d{15}$/)|(/^\d{18}$/)|(/^\d{17}(\d|X|x)$/)
@@ -262,9 +272,13 @@
 				},
 				eventHandule:{
 					init:function(){
-						$(".nav li").on("click",function(){
-							var $this = $(this);
-							$(this).addClass("active").siblings().removeClass("active")
+						$(".nav-menu").on("click",function(){
+							$('.nav-wrap').slideDown();
+							$("body").css("overflow-y","hidden")
+						});
+						$(".nav-close").on("click",function(){
+							$('.nav-wrap').slideUp();
+							$("body").css("overflow-y","auto")
 						});
 						$(".from-inline .radio-inline").on("click",function(){
 							var istrue = $(this).is(".active");

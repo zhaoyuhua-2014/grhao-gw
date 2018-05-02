@@ -27,7 +27,7 @@ input[type="color"]:focus,
 
 /*首页样式*/
 .index_body{overflow: hidden;}
-.index_body,.banner_page{width: 100%;height: 100%;}
+.index_body,.banner_page{width: 100%;height: 100%;position: relative;}
 .header-wrap{width: 100%;height: 100px;line-height: 100px;position: fixed;z-index: 1000;background: #FFF;}
 .header{width: 1200px;margin: 0 auto;}
 .header .nav{margin: 0;padding: 0;}
@@ -39,7 +39,7 @@ input[type="color"]:focus,
 .index_body .banner-wrap{height: 100%;}
 .banner-wrap .index-banner{height: 100%;}
 .index-banner .banner_page1{background: url(../img/index-banner1.png) no-repeat top center;background-size:cover ;}
-.index-banner .banner_page2{background: url(../img/index-banner2.png) no-repeat top center;overflow: hidden;background-size:cover ;}
+.index-banner .banner_page2{background: url(../img/index-banner2.png) no-repeat top center;overflow: hidden;background-size:cover ;padding-top: 100px;}
 .index-banner .banner_page3{background: url(../img/index-banner3.png) no-repeat top center;background-size:cover ;}
 .index-banner .banner_page4{background: url(../img/index-banner4.png) no-repeat top center;background-size:cover;}
 .index-banner .banner_page5{background: url(../img/index-banner2.png) no-repeat top center;background-size:cover ;}
@@ -50,6 +50,17 @@ input[type="color"]:focus,
 .banner_page2 .banner_inner_item dt{height: 46px;}
 .banner_page2 .banner_inner_item .txt{color: #333333;font-size: 14px;line-height: 24px;}
 .banner_page2 .banner_inner_item .title{color: #333333;font-size: 24px;line-height: 60px;}
+
+.banner_page4 .banner_page_inner{width: 664px;height: 382px;position: absolute;top: 30%;left: 50%;margin-left: -332px;}
+.banner_page4 .banner_page_inner .banner_bg{width: 644px;height: 362px;position: absolute;right: 0;bottom: 0;background: rgba(255,255,255,.4);}
+.banner_page4 .banner_page_inner .banner_center{width: 644px;height: 362px;position: absolute;left: 0;top: 0;background: rgba(147,191,29,.8)}
+
+.banner_page4 {color: #FFF;font-size: 24px;text-align: center;}
+.banner_page4 h2{padding-top: 60px;font-size: 24px;margin: 0;}
+.banner_page4 .line_sort{width: 124px;height: 2px;background: #FFF;margin: 6px auto;font-size: 0;display: block;}
+.banner_page4 .line_text{height: 30px;font-size: 10px;text-align: center;}
+.banner_page4 .text{padding: 0 110px;line-height: 28px;font-size: 16px;}
+
 .white-area{height: 25%;}
 .black-area{background: #353535;height: 75%;padding-top: 6%; position: relative;}
 
@@ -107,7 +118,7 @@ input[type="color"]:focus,
 .main_inner_area2_center .area2_top{padding-top: 50px;}
 .main_inner_area2_center .area2_right{padding-left: 130px;}
 .main_inner_area2_center .area2_bottom{padding-top: 70px;}
-.main_inner_area2_center .area2_left{padding-left: 5px;}
+.main_inner_area2_center .area2_left{padding-left: 5px;padding-right: 112px;text-align: right;}
 
 .main_inner_area2_center_center{position: relative;width: 360px;height: 360px;background: url(../img/center01.png) no-repeat center;margin-left: 230px;}
 .main_inner_area2_center_center .area2_item{width: 180px;height: 180px;position:absolute;font-size: 18px;}
@@ -153,9 +164,9 @@ input[type="color"]:focus,
 .banner_inner_right .erCode_item dd:nth-child(2){height: 70px;padding-top: 10px;font-size: 16px;color: #FFFFFF;line-height: 30px;}
 .banner_inner_right .erCode_item dd:nth-child(3){line-height: 22px;font-size: 12px;color: #E3E3E3;}
 
-.main-wrap-download1,.main-wrap-download3{background: #FFF;padding-bottom: 60px;}
+.main-wrap-download1,.main-wrap-download3{background: #FFF;}
 .main-wrap-download2{background: #f8f8f8;}
-.main-wrap-download1,.main-wrap-download2,.main-wrap-download3{}
+.main-wrap-download1,.main-wrap-download2,.main-wrap-download3{padding-bottom: 60px;}
 
 .download_inner_title{padding-top: 70px;line-height: 100px;text-align: center;font-size: 36px;color: #333;}
 .download_inner_center dl{float: left;}
@@ -197,6 +208,8 @@ input[type="color"]:focus,
 
 /*招商加盟*/
 .banner-wrap.partner_banner{background: url(../img/banner03.png) no-repeat center 100px;}
+.main-wrap-partner .main_inner_area:nth-last-child(1){background: #F9F9F9;}
+
 .main-wrap-partner .mian_inner_wrap{padding-top: 70px;}
 
 .main-wrap-partner .main_partner_title{font-size: 36px;font-weight: 800;line-height: 60px;padding-top: 70px;text-align: center;}
