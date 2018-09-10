@@ -72,9 +72,6 @@ module.exports = function (grunt) {
             // loc : ["http://192.168.1.12:8080/server/api.do",' 本地'],
             pro : ['API:'+'"http://api.grhao.com/server/api.do"',' 正式']
         };
-        console.log(address);
-        
-        console.log(type);
         if (!type) {
         	var commonJs = grunt.file.read( pathname[0], encoding );
 	            !address ? grunt.log.write( commonJs.match( reg ) ) : grunt.file.write(

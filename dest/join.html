@@ -111,7 +111,7 @@
 		</div>
 	</body>
 	<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>-->
 	<script type="text/javascript">
 		$(document).ready(function(){
 			var common = {
@@ -147,6 +147,7 @@
 				common.ajaxPost(data,function(d){
 					if ( d.statusCode == '100000' ) {
 						var data = d.data;
+						console.table(data)
 						var el = $(".main_join_table_center"),
 							html = '';
 						if (!!data && data.length != 0) {
@@ -201,7 +202,7 @@
 		            infoTitle: '<strong>果然好江虹店</strong>',
 		            infoBody: '<p class="my-desc">电话:0571-62079688<br/> 地址:杭州市滨江区江二路57号人工智能产业园A座104室</p>',
 					//基点指向marker的头部位置
-		            offset: new AMap.Pixel(114, -31)
+		            offset: new AMap.Pixel(0, -31)
 		        });
 		        function openInfoWin1() {
 		            infoWindow1.open(map1, marker1.getPosition());
@@ -222,7 +223,7 @@
 		            infoTitle: '<strong>果然好仓库</strong>',
 		            infoBody: '<p class="my-desc">电话:15867148768<br/> 地址:杭州市萧山区滨文路5-2A福世大厦102室</p>',
 					//基点指向marker的头部位置
-		            offset: new AMap.Pixel(114, -31)
+		            offset: new AMap.Pixel(0, -31)
 		        });
 		        function openInfoWin2() {
 		            infoWindow2.open(map2, marker2.getPosition());
@@ -243,7 +244,7 @@
 		            infoTitle: '<strong>掌烁科技有限公司</strong>',
 		            infoBody: '<p class="my-desc">电话:0571-28107686<br/> 地址:杭州市滨江区滨安路511号华业大厦2308</p>',
 					//基点指向marker的头部位置
-		            offset: new AMap.Pixel(114, -31)
+		            offset: new AMap.Pixel(0, -31)
 		        });
 		         function openInfoWin3() {
 		            infoWindow3.open(map3, marker3.getPosition());
